@@ -16,13 +16,13 @@ function ProjectsUI({ theme, classes }) {
                     </div>
                     <div className="projects--body">
                         <div className="projects--bodyContainer">
-                            {projectsData.slice(0, 3).map(project => (
+                            {projectsData.slice(0, 4).map(project => (
                                 <SingleProject
                                     theme={theme}
                                     key={project.id}
                                     id={project.id}
                                     name={project.projectName}
-                                    desc={project.projectDesc}
+                                    desc={project.projectShortDesc}
                                     tags={project.tags}
                                     code={project.code}
                                     demo={project.demo}

@@ -13,12 +13,12 @@ function SingleProjectUI({ id, name, desc, tags, code, demo, image, theme, class
                 style={{ backgroundColor: theme.quaternary }}
             >
                 <div className='projectContent'>
-                    <h2
+                    <h3
                         id={name.replace(' ', '-').toLowerCase()}
                         style={{ color: theme.tertiary }}
                     >
                         {name}
-                    </h2>
+                    </h3>
                     <img src={image ? image : placeholder} alt={name} />
                     <div className='project--showcaseBtn'>
                         <a
@@ -61,7 +61,7 @@ function SingleProjectUI({ id, name, desc, tags, code, demo, image, theme, class
                         </a>
                     </div>
                 </div>
-                {/* <p
+                <p
                     className='project--desc'
                     style={{
                         background: theme.secondary,
@@ -69,8 +69,8 @@ function SingleProjectUI({ id, name, desc, tags, code, demo, image, theme, class
                     }}
                 >
                     {desc}
-                </p> */}
-                {/* <div
+                </p>
+                <div
                     className='project--lang'
                     style={{
                         background: theme.secondary,
@@ -80,7 +80,7 @@ function SingleProjectUI({ id, name, desc, tags, code, demo, image, theme, class
                     {tags.map((tag, id) => (
                         <span key={id}>{tag}</span>
                     ))}
-                </div> */}
+                </div>
             </div>
         </Fade>
     );

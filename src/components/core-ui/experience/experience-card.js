@@ -6,7 +6,7 @@ import expImgWhite from '../../../assets/svg/experience/expImgWhite.svg';
 import { ThemeContext } from '../../../contexts/theme-context';
 import './experience.css';
 
-function ExperienceCard({id, company, jobtitle, startYear, endYear}) {
+function ExperienceCard({id, company, jobtitle, startYear, endYear, desc}) {
     const { theme } = useContext(ThemeContext);
 
     const useStyles = makeStyles((t) => ({
@@ -28,6 +28,8 @@ function ExperienceCard({id, company, jobtitle, startYear, endYear}) {
                     <h6 style={{color: theme.primary}}>{startYear}-{endYear}</h6>
                     <h4 style={{color: theme.tertiary}}>{jobtitle}</h4>
                     <h5 style={{color: theme.tertiary}}>{company}</h5>
+                    <br/>
+                    <p style={{color: theme.tertiary}}>{desc}</p>
                 </div>
             </div>
         </Fade>   
